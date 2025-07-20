@@ -1,4 +1,4 @@
-import { useState } from 'react';
+  import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { drones } from '../data/products';
@@ -161,9 +161,12 @@ const Drones = () => {
                   >
                     Compare
                   </Link>
-                  <button className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-accent-silver rounded-lg hover:bg-gray-50 dark:hover:bg-primary-dark transition-colors duration-200 text-sm">
+                  <Link
+                    to={`/drones/${drone.id}`}
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-accent-silver rounded-lg hover:bg-gray-50 dark:hover:bg-primary-dark transition-colors duration-200 text-sm"
+                  >
                     Details
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

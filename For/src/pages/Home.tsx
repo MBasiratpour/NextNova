@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+    import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { drones, vrGlasses } from '../data/products';
 
@@ -137,12 +137,20 @@ const Home = () => {
                       <span className="text-2xl font-bold text-primary-light">
                         ${drone.price}
                       </span>
-                      <Link
-                        to="/compare"
-                        className="bg-primary-light text-primary-dark px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200"
-                      >
-                        Compare
-                      </Link>
+                      <div className="flex gap-2">
+                        <Link
+                          to="/compare"
+                          className="bg-primary-light text-primary-dark px-3 py-1 rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm"
+                        >
+                          Compare
+                        </Link>
+                        <Link
+                          to={`/drones/${drone.id}`}
+                          className="bg-gray-100 dark:bg-primary-dark text-gray-700 dark:text-accent-silver px-3 py-1 rounded-lg hover:bg-gray-200 dark:hover:bg-primary-dark/70 transition-colors duration-200 text-sm"
+                        >
+                          Details
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -193,12 +201,20 @@ const Home = () => {
                       <span className="text-2xl font-bold text-primary-light">
                         ${vr.price}
                       </span>
-                      <Link
-                        to="/compare"
-                        className="bg-primary-light text-primary-dark px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200"
-                      >
-                        Compare
-                      </Link>
+                      <div className="flex gap-2">
+                        <Link
+                          to="/compare"
+                          className="bg-primary-light text-primary-dark px-3 py-1 rounded-lg hover:opacity-90 transition-opacity duration-200 text-sm"
+                        >
+                          Compare
+                        </Link>
+                        <Link
+                          to={`/vr-glasses/${vr.id}`}
+                          className="bg-gray-100 dark:bg-primary-dark text-gray-700 dark:text-accent-silver px-3 py-1 rounded-lg hover:bg-gray-200 dark:hover:bg-primary-dark/70 transition-colors duration-200 text-sm"
+                        >
+                          Details
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
